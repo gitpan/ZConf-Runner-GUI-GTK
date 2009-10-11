@@ -14,18 +14,18 @@ ZConf::Runner::GUI::GTK - The GTK GUI backend for ZConf::Runner.
 
 =head1 VERSION
 
-Version 0.0.0
+Version 0.0.1
 
 =cut
 
-our $VERSION = '0.0.0';
+our $VERSION = '0.0.1';
 
 
 =head1 SYNOPSIS
 
     use ZConf::Runner::GUI::GTK;
 
-    my $foo = ZConf::Runner::GUI::GTK->new();
+    my $zcrgg = ZConf::Runner::GUI::GTK->new();
     ...
 
 =head1 METHODS
@@ -38,14 +38,15 @@ One arguement is taken and that is a hash value.
 
 =head3 hash values
 
-=head4 zcgui
-
-This is the ZConf::GUI object. A new one will be created if it is
-
 =head4 zcrunner
 
 This is a ZConf::Runner object to use. If it is not specified,
 a new one will be created.
+
+    my $zcrgg = ZConf::Runner::GUI::GTK->new({zcrunner=>$zcrunner});
+    if($zcrgg->{error}){
+        print "Error!\n";
+    }
 
 =cut
 
